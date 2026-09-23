@@ -2,7 +2,16 @@ const footer = document.createElement('template');
 const year = new Date().getFullYear().toString();
 
 footer.innerHTML = `
-<footer class="libbil_footer">Copyleft ${year}.</footer>
+<style>
+	footer{
+		font-family: inherit;
+		padding: 1em;
+		text-align: center;
+	}
+</style>
+<footer>
+	Copyleft ${year}.
+</footer>
 `
 class siteFooter extends HTMLElement {
     constructor(){
