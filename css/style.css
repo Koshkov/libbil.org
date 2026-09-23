@@ -1,0 +1,177 @@
+/*
+ * Neubrutalist stylesheet for libbil.org
+ * Author: Mathieu Landretti
+ * Created: 2026-09-20
+ */
+
+ @font-face {
+    font-family: "grotesk";
+    src: url("../fonts/SpaceGrotesk-VariableFont_wght.ttf");
+ }
+
+ @font-face {
+    font-family: "archivo";
+    src: url("../fonts/ArchivoBlack-Regular.ttf");
+ }
+
+:root{
+    --background: #ffffff;
+    --foreground: #000000;
+    --primary: #ff963a;
+    --secondary: #a56cfe;
+    --br: 0.25em;
+    --box-shadow: 2px 2px #000000;
+    --border: solid #000000 3px;
+}
+
+/* reset css*/
+input[type=text]{
+    all: unset;
+}
+
+/* Containers default settings */
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "grotesk", monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+}
+
+h1{ text-align: center;}
+
+details{
+
+    summary{
+        width: 100%;
+        min-width: 50vw;
+    }
+
+    background-color: var(--background);
+    border: var(--border);
+    margin: 0.25em;
+    padding: 0.5em;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--br);
+}
+
+button{
+    background-color: var(--background);
+    border: var(--border);
+    margin: 0.25em;
+    font-family: "grotesk", monospace;
+    border-radius: var(--br);
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+    transition: ease-in-out 0.5s;
+}
+
+button:hover{
+    box-shadow: none;
+}
+
+.libbil_modules{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1em;
+
+    h2,p{
+        margin: 0em;
+    }
+
+    a.libbil_module {
+        text-decoration: none;
+        color: var(--foreground);
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        border-radius: var(--br);
+        width: 100%; height: 100%;
+        transition: ease-in-out 0.5s;
+    }
+
+    a.libbil_module:hover{
+        box-shadow: none;
+    }
+
+    .libbil_module_header{
+        padding: 0.25em;
+        border-bottom: var(--border);
+        background-color: var(--primary);
+    }
+
+    .libbil_module_body{
+        padding: 0.25em;
+    }
+}
+
+#shelf_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    font-weight: bold;
+    text-align: center;
+    
+    .controller{
+        text-align: center;
+        padding: 1em;
+
+        button:hover{
+            background-color: lightgreen;
+        }
+    }
+
+    .spine{
+        align-items: center;
+        justify-content: center;
+        min-height: 150px; 
+        background-color: var(--primary);
+        border: var(--border);
+        padding: 2em 0 2em 0;
+        border-radius: var(--br);
+        box-shadow: var(--box-shadow);
+    }
+
+    .label{                
+        text-align: left;
+        background-color: white;
+        padding: 1em;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        min-height: 50px;
+    }
+
+    .game_control{
+        display:block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+input[type=text],input[type=text]:focus {
+    display: inline-block;
+    width: 3ch;
+    border-bottom: var(--border);
+}
+
+#cutter_name{
+    p{
+        font-size: 3em;
+    }
+}

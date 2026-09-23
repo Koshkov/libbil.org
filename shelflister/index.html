@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Shelflister</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Shelflister</h1>
+    </header>
+    <main>
+        <section id="shelf_list">
+        </section>
+        <section class="instructions">
+            <details>
+                <summary>Instructions</summary>
+                <h2>We Need Your Help!</h2>
+                <p>
+                    You work in a Library that uses LC call numbers, and someone
+                    has messed up the shelf order! See if you can fix it. Use 
+                    the buttons to shift the books from left-to-right. Click
+                    check when you think you've got it!
+                </p>
+            </details>
+        </section>
+        <section class="game_control">
+            <button onclick="location.reload()">New Shelf</button>
+            <button onclick="solve()">Solve!</button>
+            <button onclick="check()">Check!</button>
+        </section>
+    
+    </main>
+    <footer>
+        <script src="js/logic.js"></script>
+        <script src="js/shelf-item.js"></script>
+        Copyleft 2026
+    </footer>
+</body>
+</html>
